@@ -8,4 +8,5 @@ public class ActionReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.i("SendSMS", "SMS recibido");
     }
+
 }
