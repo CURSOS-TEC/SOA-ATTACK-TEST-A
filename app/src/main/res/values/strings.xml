@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SoaScaleAttackA</string>
+    <string name="app_description1"> This app exposes two Permissions</string>
+    <string name="app_description2"> android.permission.WRITE_CONTACTS</string>
+    <string name="app_description3"> android.permission.READ_CONTACTS</string>
 </resources>
