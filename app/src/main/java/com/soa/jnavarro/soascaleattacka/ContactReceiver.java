@@ -20,9 +20,11 @@ public class ContactReceiver extends BroadcastReceiver {
         TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
         v.setTextColor(Color.RED);
         toast.show();
-
-
-
-
+        String name = intent.getStringExtra(ContactsContract.Intents.Insert.NAME);
+        String phone = intent.getStringExtra(ContactsContract.Intents.Insert.PHONE);
+        Log.i("Name", name);
+        Log.i("Phone", phone);
+        ContactUpdater contactUpdater = new ContactUpdater(context.getContentResolver());
+        contactUpdater.updateContactPhoneByName(name,phone);
     }
 }
