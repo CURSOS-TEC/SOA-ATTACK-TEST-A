@@ -1,3 +1,5 @@
+package com.soa.jnavarro.soascaleattacka;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;

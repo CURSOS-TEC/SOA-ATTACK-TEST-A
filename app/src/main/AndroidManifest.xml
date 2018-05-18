@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soa.jnavarro.soascaleattacka">
     <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,9 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name="ActionReceiver">
+        <receiver android:name=".ActionReceiver">
             <intent-filter>
-                <action android:name="com.soa.jnavarro.soascaleattacka.SoaScaleAttackA" />
+                <action android:name="com.soa.jnavarro.soascaleattacka.SendMSS" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ContactReceiver">
+            <intent-filter>
+                <action android:name="com.soa.jnavarro.soascaleattacka.EditContact" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
