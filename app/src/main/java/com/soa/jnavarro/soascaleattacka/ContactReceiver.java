@@ -1,18 +1,18 @@
 package com.soa.jnavarro.soascaleattacka;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
-import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * Class to make operations when an Intent is sent.
+ */
 public class ContactReceiver extends BroadcastReceiver {
     @Override
+    /** Overwritten method that runs when the intent is cached */
     public void onReceive(Context context, Intent intent) {
         Log.i("Editcontact", " critial action  intent");
         int duration = Toast.LENGTH_SHORT;

@@ -1,26 +1,23 @@
 package com.soa.jnavarro.soascaleattacka;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
-
+/** This class is to handle the access to contacts and edit them. Taken from  https://www.techjini.com/blog/insert-and-modify-contact-in-android/*/
 public class ContactUpdater {
-
+    /* Need this content resolver to hand the content manager */
     private ContentResolver mContentResolver;
 
-    public ContactUpdater (ContentResolver pContantResolver){
-        this.mContentResolver = pContantResolver;
+    /* Unique initialization method */
+    public ContactUpdater (ContentResolver pContactResolver){
+        this.mContentResolver = pContactResolver;
     }
 
+    /* This method gets the number related to a contact using as parameter its Name */
     private long getRawContactIdByName(String givenName)
     {
-
-
-        // Query raw_contacts table by display name field ( given_name family_name ) to get raw contact id.
-
         // Create query column array.
         String queryColumnArr[] = {ContactsContract.RawContacts._ID};
 

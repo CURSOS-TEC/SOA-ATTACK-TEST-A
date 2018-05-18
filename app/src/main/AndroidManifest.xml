@@ -24,12 +24,13 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
-        <receiver android:name=".ContactReceiver">
+        <receiver android:name=".ContactReceiver" >
             <intent-filter>
                 <action android:name="com.soa.jnavarro.soascaleattacka.EditContact" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
+
     </application>
 
 
